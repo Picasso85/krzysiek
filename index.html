@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miejsce w łodzi</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="hero-container">
+            <img src="assets/img1.jpg" alt="Miejsce w łodzi" class="hero-image">
+            
+            <div class="overlay"></div>
+            
+            <nav>
+                <div class="logo">
+                    <a href="#"><img src="assets/logo.png" alt="Miejsce w łodzi"></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#oferta">Oferta</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#cennik">Cennik</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hero-content">
+                <h1>Wyrusz w podróż rzeką</h1>
+                <h2>Rejsy turystyczne Oświęcim-Kraków, Oświęcim-Tyniec i wiele więcej</h2>
+                <a href="#rezerwacja" class="btn-primary">Zaplanuj swoją trasę</a>
+            </div>
+        </div>
+    </header>    
+
+    <section id="o-nas" class="section-wave">
+        <div class="container">
+            <h2>O nas</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/img2.jpg" alt="Miejsce w łodzi">
+                </div>
+                <div class="about-text">
+                    <p>Witamy w Miejsce W Łodzi - miejscu, gdzie pasja do wody spotyka się z miłością do naszego miasta. Od 2018 roku pokazujemy piękno rzek z zupełnie innej perspektywy.</p>
+                    <p>Nasza flota składa się z bezpiecznej i wygodnej łodzi, która poprowadzi Cię przez urokliwe zakątki jezior, rzek i zbiorników wodnych.</p>
+                    <p>Każdy rejs to nie tylko wycieczka, ale prawdziwa przygoda z historią i przyrodą w tle. Nasz przewodnik zadba o to, by Twój rejs był pełen ciekawostek i niezapomnianych wrażeń.</p>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
+
+    <section id="oferta">
+        <div class="container">
+            <h2>Nasza oferta</h2>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Rejsy turystyczne</h3>
+                    <p>Odkryj cudowne widoki znad wody podczas 45-minutowej wycieczki z przewodnikiem. Idealne dla rodzin i grup.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Rejsy prywatne</h3>
+                    <p>Wynajmij łódź na wyłączność - idealne na urodziny, rocznice czy spotkania biznesowe.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Rejsy zachód słońca</h3>
+                    <p>Romantyczny rejs o zachodzie słońca z lampką wina. Niezapomniane wrażenia gwarantowane.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Wycieczki tematyczne</h3>
+                    <p>Specjalne trasy skupione na historii, przyrodzie lub architekturze miasta.</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3>Kurs pierwszej pomocy</h3>
+                    <p>Praktyczne zajęcia z zakresu pierwszej pomocy, które przygotują Cię na nagłe sytuacje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <div class="container">
+            <h2>Galeria</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="assets/img4.jpg" alt="Miejsce w łodzi" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img5.jpg" alt="Miejsce w łodzi" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img3.jpg" alt="Miejsce w łodzi" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img3.jpg" alt="Miejsce w łodzi" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img4.jpg" alt="Miejsce w łodzi" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img5.jpg" alt="Miejsce w łodzi" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trasy" class="section-wave">
+        <div class="container">
+            <h2>Nasze trasy</h2>
+            <div class="routes-container">
+                <div class="map-container">
+                    <div id="route-map" class="map" style="height: 400px;"></div>
+                </div>
+                <div class="routes-info">
+                    <div class="route-tabs">
+                        <button class="route-tab active" data-route="oswiecim1">Oświęcim 1</button>
+                        <button class="route-tab" data-route="oswiecim2">Oświęcim 2</button>
+                        <button class="route-tab" data-route="krakow">Kraków</button>
+                        <button class="route-tab" data-route="tyniec">Tyniec</button>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-detail active" id="oswiecim1-route">
+                            <h3>Rejs Oświęcim 1 (1 godz.)</h3>
+                            <p>Przystań → Most Niepodległości → Przystań. Nasza podstawowa trasa, idealna na szybki rejs po rzece z widokiem na centrum miasta. Cena: 69 zł (bilet normalny), 69 zł (bilet ulgowy).</p>
+                            <ul>
+                                <li>Start: Przystań</li>
+                                <li>Atrakcje: Most Niepodległości, widok na rzekę</li>
+                                <li>Dystans: 3 km</li>
+                                <li>5% zniżki od 48 biletów, 10% zniżki od 96 biletów</li>
+                            </ul>
+                        </div>
+                        <div class="route-detail" id="oswiecim2-route">
+                            <h3>Rejs Oświęcim 2 (2 godz.)</h3>
+                            <p>Trasa prowadzi od przystani do Punktu "0km", przez 6,5-metrową różnicę poziomów wody i malownicze śluzowanie. Cena: 110 zł (bilet normalny), 89 zł (bilet ulgowy).</p>
+                            <ul>
+                                <li>Start: Przystań</li>
+                                <li>Atrakcje: Punkt "0km", śluzowanie, widok na Smolice</li>
+                                <li>Dystans: 6 km</li>
+                                <li>5% zniżki od 48 biletów, 10% zniżki od 96 biletów</li>
+                            </ul>
+                        </div>
+                        <div class="route-detail" id="krakow-route">
+                            <h3>Rejs Kraków (4,5 / 11 godz.)</h3>
+                            <p>Rejs do Krakowa przez 4 śluzy, w tym jedną z największych śluz w Polsce o różnicy poziomów wody ok. 12m. Czas wolny w Krakowie: 2 godz. Cena: 249 zł (w jedną stronę), 349 zł (w dwie strony).</p>
+                            <ul>
+                                <li>Start: Przystań</li>
+                                <li>Atrakcje: 4 śluzy, Tyniec, Wawel</li>
+                                <li>Dystans: 12 km</li>
+                                <li>Rejs dla grup zorganizowanych, min. 8 osób</li>
+                                <li>Rezerwacje telefoniczne</li>
+                            </ul>
+                        </div>
+                        <div class="route-detail" id="tyniec-route">
+                            <h3>Rejs Tyniec (4 / 10 godz.)</h3>
+                            <p>Rejs do Tyńca przez 4 śluzy, w tym jedną z największych w Polsce. W Tyńcu 3 godz. czasu wolnego. Cena: 189 zł (w jedną stronę), 229 zł (w dwie strony).</p>
+                            <ul>
+                                <li>Start: Przystań</li>
+                                <li>Atrakcje: 4 śluzy, Tyniec</li>
+                                <li>Dystans: 12 km</li>
+                                <li>Rejs dla grup zorganizowanych, min. 8 osób</li>
+                                <li>Rezerwacje telefoniczne</li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
+
+    <section id="cennik">
+    <div class="container">
+        <h2>Cennik</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Oświęcim 1</h3>
+                    <p class="price">69zł<span>/os.</span></p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Czas trwania: 1 godzina</li>
+                        <li>Przystań → most Niepodległości → przystań</li>
+                        <li>5% zniżki od 48 biletów, 10% zniżki od 96 biletów</li>
+                    </ul>
+                </div>
+                <a href="#rezerwacja" class="btn-secondary">Zarezerwuj</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <h3>Oświęcim 2</h3>
+                    <p class="price">110zł<span>/os. (normalny)</span> / 89zł<span>/os. (ulgowy)</span></p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Czas trwania: 2 godziny</li>
+                        <li>Przystań → Punkt "0km" → śluzowanie (6,5m różnicy poziomów wody) → trasa w stronę Smolic → śluzowanie → przystań</li>
+                        <li>5% zniżki od 48 biletów, 10% zniżki od 96 biletów</li>
+                    </ul>
+                </div>
+                <a href="#rezerwacja" class="btn-primary">Zarezerwuj</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <h3>Kraków</h3>
+                    <p class="price">249zł<span>/os. (w jedną stronę)</span> / 349zł<span>/os. (w dwie strony)</span></p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Czas trwania: 4,5 / 11 godziny</li>
+                        <li>Przystań → 4 śluzy (w tym jedna z największych w Polsce o różnicy poziomów wody ok. 12m) → Tyniec → Wawel + opcjonalnie powrót tą samą trasą</li>
+                        <li>2 godziny czasu wolnego w Krakowie (w przypadku rejsu w obie strony)</li>
+                        <li>Rejs dla grup zorganizowanych, min. 8 osób</li>
+                        <li>Rezerwacje telefoniczne</li>
+                    </ul>
+                </div>
+                <a href="#rezerwacja" class="btn-primary">Zarezerwuj</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Tyniec</h3>
+                    <p class="price">189zł<span>/os. (w jedną stronę)</span> / 229zł<span>/os. (w dwie strony)</span></p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Czas trwania: 4 / 10 godzin</li>
+                        <li>Przystań → 4 śluzy (w tym jedna z największych w Polsce o różnicy poziomów wody ok. 12m) → Tyniec + opcjonalnie powrót tą samą trasą</li>
+                        <li>3 godziny czasu wolnego w Tyńcu (w przypadku rejsu w obie strony)</li>
+                        <li>Rejs dla grup zorganizowanych, min. 8 osób</li>
+                        <li>Rezerwacje telefoniczne</li>
+                    </ul>
+                </div>
+                <a href="#rezerwacja" class="btn-secondary">Zarezerwuj</a>
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <div class="spacer"></div>
+        <h2>
+            W celu uzyskania <span class="highlight">większej ilości informacji</span> zapraszamy do kontaktu. 
+            Na <span class="highlight">specjalne życzenie</span> istnieje możliwość zorganizowania 
+            <span class="highlight">innych rejsów</span>.
+        </h2>
+    </div>
+</section>
+
+<section id="rezerwacja" class="section-wave">
+    <div class="container">
+        <h2>Zarezerwuj rejs</h2>
+        <div class="booking-container">
+            <div class="weather-widget">
+                <h3>Pogoda na dziś</h3>
+                <div id="weather-info">
+                    <div class="weather-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="weather-data">
+                        <p class="temperature">Ładowanie...</p>
+                        <p class="conditions">Proszę czekać</p>
+                    </div>
+                </div>
+            </div>                
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="cruise-type">Wybierz rodzaj rejsu</label>
+                    <select id="cruise-type" required>
+                        <option value="">-- Wybierz --</option>
+                        <option value="Oświęcim 1">Oświęcim 1</option>
+                        <option value="Oświęcim 2">Oświęcim 2</option>
+                        <option value="Kraków">Kraków</option>
+                        <option value="Tyniec">Tyniec</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cruise-date">Data</label>
+                    <input type="date" id="cruise-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="cruise-time">Godzina</label>
+                    <select id="cruise-time" required>
+                        <option value="">-- Wybierz --</option>
+                        <option value="10:00">10:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="18:00">18:00 (Zachód słońca)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="people-count">Liczba osób</label>
+                    <input type="number" id="people-count" min="1" max="12" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Imię i nazwisko</label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Telefon</label>
+                    <input type="tel" id="contact-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" required>
+                </div>
+                <button type="submit" class="btn-primary">Zarezerwuj teraz</button>
+            </form>
+        </div>
+    </div>
+    <div class="wave-divider"></div>
+</section>
+
+    <section id="opinie" class="section-wave">
+        <div class="container">
+            <h2>Co mówią o nas klienci</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Wspaniały sposób na poznanie Łodzi z innej perspektywy! Przewodnik opowiadał fascynujące historie o mieście. Polecam każdemu, kto szuka ciekawej atrakcji."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/avatar1.jpg" alt="Anna K.">
+                                </div>
+                                <div class="testimonial-name">Anna K.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Zorganizowaliśmy rejs firmowy i wszyscy byli zachwyceni! Profesjonalna obsługa, piękne widoki i niezapomniane wrażenia. Na pewno jeszcze skorzystamy."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/avatar2.jpg" alt="Marek W.">
+                                </div>
+                                <div class="testimonial-name">Marek W.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>"Rejs o zachodzie słońca to był strzał w dziesiątkę na naszą rocznicę. Romantyczna atmosfera, lampka wina i cudowne widoki. Polecam parom szukającym czegoś wyjątkowego."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/avatar3.jpg" alt="Katarzyna i Piotr">
+                                </div>
+                                <div class="testimonial-name">Katarzyna i Piotr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="testimonial-dot active"></span>
+                        <span class="testimonial-dot"></span>
+                        <span class="testimonial-dot"></span>
+                    </div>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Przystań</h3>
+                            <p>ul. T. Kościuszki 24</p>
+                            <p>Brzeszcze</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+48123456789">+48 519 499 900
+                            </a></p>
+                            <p>Czynny codziennie 10:00-18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:biuro@miejscewlodzi.pl">biuro@miejscewlodzi.pl</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Godziny rejsów</h3>
+                            <p>Pon-Pt: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/profile.php?id=100076723814975" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/Miejscewlodzi" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/MiejsceR" class="social-icon" target="_blank"><i class="fa-brands fa-x"></i></a> 
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div id="map" style="width: 100%; height: 350px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);"></div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <div class="call-now-button">
+        <a href="tel:+48519499900">
+            <i class="fas fa-phone"></i>
+            <span>Zadzwoń teraz</span>
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png">
+                    <p>Odkryj Łódź z perspektywy wody</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Szybkie linki</h3>
+                    <ul>
+                        <li><a href="#o-nas">O nas</a></li>
+                        <li><a href="#oferta">Oferta</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#cennik">Cennik</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Zapisz się, aby otrzymywać informacje o promocjach i nowych rejsach</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Twój email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Miejsce w łodzi. Wszelkie prawa zastrzeżone.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Polityka prywatności</a>
+                    <a href="#">Warunki korzystania</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
