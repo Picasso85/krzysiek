@@ -179,7 +179,8 @@ nav {
 }
 
 .logo img {
-    height: 60px;
+    margin: 1rem 1rem;
+    height: 4rem;
     width: auto;
 }
 
@@ -370,39 +371,92 @@ nav {
 
 .weather-widget {
     flex: 1;
-    min-width: 250px;
-    background-color: var(--light-blue);
+    min-width: 280px;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    border-radius: 15px;
+    background: rgba(0, 126, 255, 0.2); /* Niebieskie przezroczyste tło */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    backdrop-filter: blur(8px); /* Efekt rozmycia tła */
+    transition: transform 0.5s ease-out, background 0.5s ease-out; /* Łagodne przejścia */
 }
 
+/* Efekt hover - powiększenie i zmiana tła */
+.weather-widget:hover {
+    background: rgba(0, 126, 255, 0.3);
+    transform: scale(1.05); /* Powiększenie przy hover */
+}
+
+/* Animacja fal w tle */
+.weather-widget::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('waves.svg') repeat;
+    animation: waveMovement 7s linear infinite;
+    opacity: 0.25;
+}
+
+/* Tytuł z płynącym efektem */
 .weather-widget h3 {
-    color: var(--dark-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
+    position: relative;
+    animation: fadeIn 1s ease-out;
 }
 
+/* Animacja przesuwania tła fal */
+@keyframes waveMovement {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
+
+/* Animacja unoszenia ikon pogodowych */
 #weather-info {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .weather-icon {
-    font-size: 40px;
-    color: var(--sand);
+    font-size: 80px;
     margin-right: 20px;
+    animation: floatUp 2s ease-in-out infinite;
 }
 
+/* Animacja falowania ikon */
+@keyframes floatUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Animacja zanikania i pojawiania się temperatury */
 .weather-data {
-    color: var(--dark-blue);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 .temperature {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.6rem;
+    font-weight: bold;
 }
+
+/* Animacja zanikania tytułu */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
 
 .booking-form {
     flex: 2;
